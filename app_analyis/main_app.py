@@ -71,13 +71,7 @@ def home():
                 font=dict(color='black', size=11),
                 align='center'))
     ])
-    fig_table.update_layout(
-        width=800,  # Adjust width as needed
-        height=200,  # Adjust height as needed
-        margin=dict(l=0, r=0, t=0, b=0),
-        paper_bgcolor="#1E1E1E",  # Background color to match the main background
-        plot_bgcolor="#1E1E1E"
-    )
+    
     st.plotly_chart(fig_table, use_container_width=True)
 
     # Average Price by Brand
@@ -92,26 +86,6 @@ def home():
     )
     st.plotly_chart(fig_avg_price, use_container_width=True)
 
-
-
-    # Background color styling
-    st.markdown(
-        """
-        <style>
-        .main {
-            background-color: #1E1E1E;
-            color: white;
-        }
-        .css-18e3th9 {
-            color: white;
-        }
-        .css-1d391kg {
-            color: white;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
 
 def data_overview():
     st.title("Data Overview")
