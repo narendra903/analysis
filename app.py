@@ -5,7 +5,7 @@ import pandas as pd
 st.title("My Data Analysis Project")
 
 # Load your data
-data = pd.read_csv('data/your_data.csv')
+data = pd.read_csv('/workspaces/analysis/app_analyis/df.csv')
 
 # Display the data
 st.write("Here is the data:")
