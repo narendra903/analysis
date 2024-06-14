@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import seaborn as sns
@@ -7,14 +8,18 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 # Load the dataset
-file_path = '/workspaces/analysis/app_analyis/df.csv'
+#file_path = '/workspaces/analysis/app_analyis/df.csv'
+#df = pd.read_csv(file_path)
+
+# Load the dataset using a relative path
+file_path = os.path.join(os.path.dirname(__file__), 'df.csv')
 df = pd.read_csv(file_path)
 
 # Streamlit App
 def main():
     # Set page config
     st.set_page_config(
-        page_title="Laptop Analysis Dashboard",
+        page_title="Laptop Analysis Dashboard 2024",
         page_icon="💻",
         layout="wide",
         initial_sidebar_state="expanded",
@@ -38,7 +43,7 @@ def main():
     page()
 
 def home():
-    st.title("Laptop Analysis Dashboard")
+    st.title("Laptop Analysis Dashboard 2024")
     st.write("Welcome to the Laptop Analysis Dashboard. Use the navigation bar to explore different insights.")
     
     # Overview of the dataset
