@@ -192,7 +192,7 @@ def brand_analysis():
     st.subheader("Price vs. Spec Score")
     fig_price_spec = px.scatter(brand_data, x='Spec_Score', y='Price', color='Series',
                                 title=f"Price vs. Spec Score for {selected_brand}",
-                                labels={"Spec_Score": "Specification Score", "Price": "Price in USD", "Series": "Laptop Series"})
+                                labels={"Spec_Score": "Specification Score", "Price": "Price in Rupees", "Series": "Laptop Series"})
     fig_price_spec.update_layout(
         plot_bgcolor="rgba(0, 0, 0, 0)",
         paper_bgcolor="rgba(0, 0, 0, 0)",
